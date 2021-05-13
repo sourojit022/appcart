@@ -3,15 +3,9 @@ import Login from "../Auth/Login";
 import Registration from "../Auth/Registration";
 import Header from "../Layout/Header/Header";
 import { BrowserRouter, Switch, Route,Redirect } from "react-router-dom";
-
 import Home from "../Component/Home";
-
-
 import Protectedroutecart from '../Routing/Protectedroutecart';
-
-
 import  Footer from "../Layout/footer/footer";
-import ReturnsPolicy from "../Component/ReturnsPolicy";
 import Protectedroute from '../Routing/Protectedroute';
 import Productcategory from "../Component/Products/Productcategory/Productcategory";
 import Categorydetails from "../Component/Products/Categorydetails/Categorydetails";
@@ -29,6 +23,14 @@ import Steper  from "../Component/orderpage/Steper";
 import Myprofile from "../Component/Myprofile";
 import About from "../Component/About";
 import Help from "../Component/Help";
+
+
+
+
+
+
+
+
 export default function Routing() {
   return (
     <>
@@ -42,7 +44,6 @@ export default function Routing() {
                 </Route>
           <Route path="/Login" component={Login} />
           <Route path="/Registration" component={Registration} />
-          <Route path="/ReturnsPolicy" component={ReturnsPolicy} />
           <Route path="/Productcategory" component={Productcategory} />
           <Route path="/Categorydetails/:cname" component={Categorydetails} />
           <Route path="/Productdetails/:pname" component={Productdetails} />
@@ -52,23 +53,13 @@ export default function Routing() {
           <Route path="/PaymentForm" component={PaymentForm} />
           <Route path="/Checkout" component={Checkout} />
           <Route path="/Help" component={Help} />
-         
-         <Route path="/About" component={About} />
-          
-          
-          <Route path="/Steper " component={Steper }/>
-         
-
-          
-          {/* <Route exact path='/Cart' component={Cart}/> */}
-          <Route exact path='/Tabs' component={Tabs}/>
-        
-          <Route exact path='/Protosd' component={Photosd}/>
+           <Route path="/About" component={About} />
+            <Route path="/Steper " component={Steper }/>
+            <Route exact path='/Tabs' component={Tabs}/>
+           <Route exact path='/Protosd' component={Photosd}/>
           <Route exact path='/Services' component={Services}/>
-        
-         <Route path="/Protectedroute" component={Protectedroute} />
+           <Route path="/Protectedroute" component={Protectedroute} />
           <Protectedroute path="/Myprofile" component={Myprofile} />
-          
           <Protectedroutecart path="/cart" component={Cart} />
 
           <Route path='/' render={()=>(<h1>Page Not Found</h1>)}/>
